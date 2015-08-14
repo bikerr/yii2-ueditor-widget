@@ -14,6 +14,18 @@ example:
 -----
 ```php
 <?php
+//作为$form的一部分
+$form->field($model, 'content')->widget(\xj\ueditor\Ueditor::className(), [
+    'style' => 'width:100%;height:400px',
+    'renderTag' => true,
+    'readyEvent' => 'console.log("example2 ready")',
+    'jsOptions' => [
+        'serverUrl' => yii\helpers\Url::to(['upload']),
+        'autoHeightEnable' => true,
+        'autoFloatEnable' => true
+    ],
+])
+
 //外部TAG
 echo \xj\ueditor\Html::tag('script', $model->username, [
     'id' => Html::getInputId($model, 'username'),
