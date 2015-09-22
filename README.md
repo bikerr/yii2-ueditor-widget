@@ -1,17 +1,15 @@
-yii2-ueditor-widget
-===================
+# yii2-ueditor-widget
 
-
-composer.json
------
+### composer.json
+---
 ```json
 "require": {
-        "xj/yii2-ueditor-widget": "*"
+        "xj/yii2-ueditor-widget": "~1.0.0"
 },
 ```
 
-example:
------
+### example:
+---
 ```php
 <?php
 //作为$form的一部分
@@ -64,8 +62,8 @@ echo \xj\ueditor\Ueditor::widget([
 ?>
 ```
 
-Action:
-----
+### Action:
+---
 ```php
 public function actions() {
 return [
