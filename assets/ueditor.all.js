@@ -1,7 +1,7 @@
 /*!
  * UEditor
  * version: ueditor
- * build: Thu May 29 2014 16:47:49 GMT+0800 (中国标准时间)
+ * build: Tue Aug 25 2015 15:23:01 GMT+0800 (CST)
  */
 
 (function(){
@@ -9531,6 +9531,7 @@ var htmlparser = UE.htmlparser = function (htmlstr,ignoreBlank) {
     }
     return root;
 };
+
 
 // core/filternode.js
 /**
@@ -19810,6 +19811,7 @@ UE.plugins['video'] = function (){
     }
 })();
 
+
 // plugins/table.action.js
 /**
  * Created with JetBrains PhpStorm.
@@ -24433,7 +24435,8 @@ UE.plugin.register('simpleupload', function (){
             wrapper.innerHTML = '<form id="edui_form_' + timestrap + '" target="edui_iframe_' + timestrap + '" method="POST" enctype="multipart/form-data" action="' + me.getOpt('serverUrl') + '" ' +
             'style="' + btnStyle + '">' +
             '<input id="edui_input_' + timestrap + '" type="file" accept="image/*" name="' + me.options.imageFieldName + '" ' +
-            'style="' + btnStyle + '"></form>' +
+            'style="' + btnStyle + '">' +
+            '</form>' +
             '<iframe id="edui_iframe_' + timestrap + '" name="edui_iframe_' + timestrap + '" style="display:none;width:0;height:0;border:0;margin:0;padding:0;position:absolute;"></iframe>';
 
             wrapper.className = 'edui-' + me.options.theme;
