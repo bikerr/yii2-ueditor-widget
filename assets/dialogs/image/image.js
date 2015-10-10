@@ -700,6 +700,11 @@
 
             uploader.on('uploadBeforeSend', function (file, data, header) {
                 //这里可以通过data对象添加POST参数
+                var _param = $(window.parent.document).find('meta[name=csrf-param]').prop('content');
+                var _token = $(window.parent.document).find('meta[name=csrf-token]').prop('content');
+                if (_param.length > 0 && _token.length > 0) {
+                    data[_param] = _token;
+                }
                 header['X_Requested_With'] = 'XMLHttpRequest';
             });
 
