@@ -36,8 +36,6 @@ class Upload extends Action {
         'scrawlPathFormat' => '{yyyy}{mm}{dd}/{time}{rand:6}',
         'snapscreenPathFormat' => '{yyyy}{mm}{dd}/{time}{rand:6}',
         'catcherPathFormat' => '{yyyy}{mm}{dd}/{time}{rand:6}',
-        'snapscreenPathFormat' => '{yyyy}{mm}{dd}/{time}{rand:6}',
-        'catcherPathFormat' => '{yyyy}{mm}{dd}/{time}{rand:6}',
         'videoPathFormat' => '{yyyy}{mm}{dd}/{time}{rand:6}',
         'filePathFormat' => '{yyyy}{mm}{dd}/{time}{rand:6}',
     ];
