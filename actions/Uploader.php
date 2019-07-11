@@ -187,8 +187,12 @@ class Uploader {
 //            $this->stateInfo = $this->getStateInfo("ERROR_HTTP_CONTENTTYPE");
 //            return;
 //        }
-        $fileType = strtolower(substr($heads['Content-Type'], 6));
-        if (!stristr($heads['Content-Type'], "image")) {
+        $contentType = isset($heads['Content-Type']) ? $heads['Content-Type']:'';
+
+        $contentType = is_array($contentType) ? $contentType[0]:$contentType;
+
+        $fileType = strtolower(substr($contentType, 6));
+        if (!stristr($contentType, "image")) {
             $this->stateInfo = $this->getStateInfo("ERROR_HTTP_CONTENTTYPE");
             return;
         }
